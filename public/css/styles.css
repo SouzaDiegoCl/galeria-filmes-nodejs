@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;  
+}
+/* Header */
+nav{
+    padding-inline: 10vw !important;
+    background-color: rgb(0, 0, 0) !important;
+    
+}
+.navbar-brand{
+    color: #FFF !important;
+}
+.nav-item > a{
+    color: #FFF !important;
+}
+
+
+/* Media Query */
+@media (max-width: 900px) {
+    /* Header */
+    nav{
+        padding-inline: 0vw !important;
+    }  
+    
+    
+}
+
