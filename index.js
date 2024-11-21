@@ -7,6 +7,10 @@ import connection from "./config/sequelize-config.js";
 //Models
 import Filme from "./models/Filmes.js";
 
+//Outras rotas
+
+import FilmeController from "./controllers/FilmeControllers.js";
+
 //Conexão
 connection
   .authenticate()
@@ -20,6 +24,8 @@ connection
 const app = express();
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+
+app.use("/", FilmeController);
 
 // Criando o banco de dados se ele não existir
 connection

@@ -1,7 +1,322 @@
 <%- include('partials/header.ejs') %>
+<div class="home-page-container">
+  <!-- Carrossel de Filmes em Destaque -->
+  <div
+    id="autoplayCarouselFilmesDestaque"
+    class="carousel"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-item-image">
+          <img
+            src="img/mocks/gladiador_wallpaper.png"
+            class="d-block w-100"
+            alt="Wallpaper do Filme"
+            width="50px"
+          />
+          <div class="carousel-item-button-container">
+            <h2>GLADIADOR II</h2>
+            <button class="btn btn-light" onClick="location.href='/filme'">
+              COMPRAR INGRESSO
+              <i
+                class="fa-solid fa-caret-right fa-xl"
+                style="color: #000000"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item-image">
+          <img
+            src="img/mocks/venon_wallpaper.png"
+            class="d-block w-100"
+            alt="Wallpaper do Filme"
+            width="50px"
+          />
+          <div class="carousel-item-button-container">
+            <h2>VENOM: A ÚLTIMA RODADA</h2>
+            <button class="btn btn-light">
+              COMPRAR INGRESSO
+              <i
+                class="fa-solid fa-caret-right fa-xl"
+                style="color: #000000"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item-image">
+          <img
+            src="img/mocks/operacaonatal_wallpaper.png"
+            class="d-block w-100"
+            alt="Wallpaper do Filme"
+            width="50px"
+          />
+          <div class="carousel-item-button-container">
+            <h2>OPERAÇÃO NATAL</h2>
+            <button class="btn btn-light carousel-item-button">
+              COMPRAR INGRESSO
+              <i
+                class="fa-solid fa-caret-right fa-xl"
+                style="color: #000000"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#autoplayCarouselFilmesDestaque"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      id="carousel-filmes-destaque-control-next"
+      type="button"
+      data-bs-target="#autoplayCarouselFilmesDestaque"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-<div class="aaa">
-    aaaa
+  <!-- Lista Filmes -->
+  <div id="lista-filmes-container">
+    <div class="lista-filmes-header">
+      <h3>PROGRAMAÇÃO</h3>
+      <div class="lista-filmes-buttons-container">
+        <div class="lista-filmes-btn-navegacao">
+          <a href="/novoFilme">
+            <i class="fa-solid fa-plus fa-xl"></i>
+          </a>
+        </div>
+        <div
+          id="carousel-lista-filmes-control-prev"
+          class="lista-filmes-btn-prev lista-filmes-btn-navegacao"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div
+          id="carousel-lista-filmes-control-next"
+          class="lista-filmes-btn-next lista-filmes-btn-navegacao"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner" id="carousel-lista-filmes-inner">
+        <div class="carousel-item lista-item-filme active">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/gladiador_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item lista-item-filme">
+          <div class="card" style="width: 18rem">
+            <img
+              src="img/mocks/venon_wallpaper.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
 </div>
-
 <%- include('partials/footer.ejs') %>
