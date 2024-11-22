@@ -1,53 +1,74 @@
 <%- include('partials/header.ejs') %>
-<div class="filme-novo-container">
-  <div>
+  <div class="filme-novo-container">
     <form action="" method="post" enctype='multipart/form-data'>
-      <label for="" class="form-label input-label">Insira a Imagem de Wallpaper do Filme</label>
-      <input type="file"  accept="image/*" class="form-control">
-  </div>
-  <div class="wallpaper-container wallpaper-container-input">
-    </form>
-      <img
-        src="img/utils/plus.png"
-        class="d-block w-100"
-        alt="Wallpaper do Filme"        
-        style="max-height: 200px;"
-        />
-      <div class="wallpaper-title">
-        <input type="text" placeholder="Título do Filme" class="form-control" name="titulo">
-      </div>
-  </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-12">
-        <img
-        src="img/mocks/gladiador_poster.png"
-        class="d-block w-100 poster-image"
-        alt="Poster do Filme"
-      />
-      </div>
-      <div class="col-md-9 col-sm-12 d-flex flex-column justify-content-end">
-        <div class="d-flex flex-row align-items-center justify-content-start" style="gap: 5px; color: #fff; font-weight: 600; border-width: .5px; border-color: #7a7a7a; border-style: solid; width: fit-content; padding: 5px; border-radius: 10px; ">
-          <div style="background-color: #BE0D0D; border-radius: 5px; padding-inline: 5px; ">16</div>
-          <p style="margin: 0px;">Ação</p>
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <label class="form-label input-label">Insira a Imagem do Poster do Filme</label>
+          <input type="file" accept="image/*" class="form-control">
+          <div class="wallpaper-container wallpaper-container-input text-center mt-3">
+            <!-- <img src="img/utils/plus.png" class="poster-image" alt="Poster do Filme"  width="80%"/> -->
+          </div>
         </div>
-        <textarea name="descricao" id="inputDescricao" placeholder="Descrição" class="form-control  mt-3" rows="6"></textarea>  
+        <div class="col-md-9 col-sm-12">
+          <label class="form-label input-label">Insira a Imagem de Wallpaper do Filme</label>
+          <input type="file" accept="image/*" class="form-control">
+          <div class="wallpaper-container wallpaper-container-input text-center mt-3">
+            <!-- <img src="img/utils/plus.png" alt="Wallpaper do Filme" width="80%" /> -->
+          </div>        
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <label class="form-label input-label mt-3">Insira o título do Filme</label>
+          <input type="text" placeholder="Título do Filme" class="form-control" name="titulo">
+        </div>
       </div>
-    </div>
-    <div>
-      <hr>
-      <div class="filme-descricao-item">
-        <p class="filme-descricao-item-title">Distribuído por</p>
-        <p class="filme-descricao-item-data">        <input type="text" placeholder="Produtora" class="form-control" name="produtora">
-        </p>
+      <div>
       </div>
-      <hr>
-      <div class="filme-descricao-item">
-        <p class="filme-descricao-item-title">Diretor</p>
-        <p class="filme-descricao-item-data">
-                  <input type="text" placeholder="Diretor" class="form-control" name="diretor">
-        </p>
+
+      <div class="row mt-3">
+        <div class="col-md-12 col-sm-12 d-flex flex-column justify-content-end">  
+          <label class="form-label input-label">Insira a descrição do Filme</label>        
+          <textarea name="descricao" id="inputDescricao" placeholder="Descrição" class="form-control  mt-3"
+            rows="6"></textarea>
+        </div>
       </div>
-    </div>
+      <div>
+        <hr>
+        <div class="filme-descricao-item">
+          <p class="filme-descricao-item-title">Distribuído por</p>
+          <p class="filme-descricao-item-data"> <input type="text" placeholder="Produtora" class="form-control" name="produtora">
+          </p>
+        </div>
+        <hr>
+        <div class="filme-descricao-item">
+          <p class="filme-descricao-item-title">Diretor</p>
+          <p class="filme-descricao-item-data">
+            <input type="text" placeholder="Diretor" class="form-control" name="diretor">
+          </p>
+        </div>
+        <hr>
+        <div class="filme-descricao-item">
+          <p class="filme-descricao-item-title">Ano</p>
+          <p class="filme-descricao-item-data">
+            <input type="text" placeholder="Ano de publicação" class="form-control" name="ano">
+          </p>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-start"
+            style="gap: 5px; color: #fff; font-weight: 600; border-width: .5px; border-color: #7a7a7a; border-style: solid; width: fit-content; padding: 5px; border-radius: 10px; ">
+            <div style="background-color: #BE0D0D; border-radius: 5px; padding-inline: 5px; ">16</div>
+            <p style="margin: 0px;">Ação</p>
+          </div>
+        <hr>
+        <div class="row text-center">
+          <div>
+            <input type="submit" class="btn btn-success col-4">
+
+          </div>
+
+        </div>
+    </form>
+
+
   </div>
-</div>
-<%- include('partials/footer.ejs') %>
+  </div>
+  </div>
+  <%- include('partials/footer.ejs') %>
