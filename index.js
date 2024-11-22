@@ -37,9 +37,7 @@ connection
     console.log(error);
   });
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
+
 
 const port = 8080;
 app.listen(port, (error) => {

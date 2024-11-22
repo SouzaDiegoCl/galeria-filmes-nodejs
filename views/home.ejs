@@ -17,7 +17,11 @@
           />
           <div class="carousel-item-button-container">
             <h2>GLADIADOR II</h2>
-            <button class="btn btn-light" onClick="location.href='/filme'" style="z-index: 2; position: relative;">
+            <button
+              class="btn btn-light"
+              onClick="location.href='/filme'"
+              style="z-index: 2; position: relative"
+            >
               COMPRAR INGRESSO
               <i
                 class="fa-solid fa-caret-right fa-xl"
@@ -37,7 +41,10 @@
           />
           <div class="carousel-item-button-container">
             <h2>VENOM: A ÚLTIMA RODADA</h2>
-            <button class="btn btn-light" style="z-index: 2; position: relative;">
+            <button
+              class="btn btn-light"
+              style="z-index: 2; position: relative"
+            >
               COMPRAR INGRESSO
               <i
                 class="fa-solid fa-caret-right fa-xl"
@@ -57,7 +64,10 @@
           />
           <div class="carousel-item-button-container">
             <h2>OPERAÇÃO NATAL</h2>
-            <button class="btn btn-light carousel-item-button" style="z-index: 2; position: relative;">
+            <button
+              class="btn btn-light carousel-item-button"
+              style="z-index: 2; position: relative"
+            >
               COMPRAR INGRESSO
               <i
                 class="fa-solid fa-caret-right fa-xl"
@@ -73,7 +83,7 @@
       type="button"
       data-bs-target="#autoplayCarouselFilmesDestaque"
       data-bs-slide="prev"
-      style="z-index: 1;"
+      style="z-index: 1"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -84,7 +94,7 @@
       type="button"
       data-bs-target="#autoplayCarouselFilmesDestaque"
       data-bs-slide="next"
-      style="z-index: 1;"
+      style="z-index: 1"
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
@@ -117,207 +127,54 @@
     </div>
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner" id="carousel-lista-filmes-inner">
+        <% if (filmes.length > 0) { filmes.forEach(filme => { %>
         <div class="carousel-item lista-item-filme active">
           <div class="card" style="width: 18rem">
             <img
-              src="img/mocks/gladiador_wallpaper.png"
+              src="img/uploads/<%= filme.poster_image_name%>"
               class="card-img-top"
-              alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title"><%= filme.titulo %></h5>
+              <p class="card-text"><%= filme.descricao %></p>
+              <a href="#" class="btn btn-primary">Comprar Ingresso</a>
             </div>
           </div>
         </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <% }) } else{ %>
+        <div
+          class="text-center container"
+          style="
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+          "
+        >
+          <h3 style="font-weight: 700">Sem Filmes Cadastrados</h3>
+          <span>Adicione um novo filme</span>
         </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/gladiador_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item lista-item-filme">
-          <div class="card" style="width: 18rem">
-            <img
-              src="img/mocks/venon_wallpaper.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+        <% } %>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
 </div>
