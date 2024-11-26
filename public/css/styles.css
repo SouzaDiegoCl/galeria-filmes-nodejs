@@ -146,6 +146,7 @@ main {
     border: none !important;
     background-color: transparent !important;
     color: #FFF !important;
+    
 }
 .card-top{
     width: 100% ;
@@ -157,10 +158,13 @@ main {
 }
 .card-bottom-body{
     background-color: #23211E;
-    border-radius: 15px !important;
+    border-radius: 15px !important;    
 }
 
-
+.lista-item-filme:hover{
+    transform: scale(1.05);
+    
+}
 
 
 /* Filme Informacoes Page */

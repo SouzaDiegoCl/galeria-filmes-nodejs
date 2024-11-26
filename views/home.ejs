@@ -76,7 +76,7 @@
         <div class="carousel-inner" id="carousel-lista-filmes-inner">
           <% if (filmes.length> 0) { filmes.forEach(filme => { %>
             <div class="carousel-item lista-item-filme active">
-              <a href="/filmeInfo/<%= filme.id %>">
+              <a href="/filmeInfo/<%= filme.id %>" style="text-decoration: none;">
                 <div class="card" style="width: 18rem">
                   <div class="card-top">
                     <img class="card-img-top" src="img/uploads/<%= filme.poster_image_name%>" />
