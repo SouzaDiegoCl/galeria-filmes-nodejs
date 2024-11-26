@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+<div class="filme-info-container">
+  <div class="wallpaper-container">
+      <img
+        src="/img/uploads/<%= filme.wallpaper_image_name%>"
+        class="d-block w-100"
+        alt="Wallpaper do Filme"
+      />
+      <div class="wallpaper-title">
+        <h2><%= filme.titulo  %></h2>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-3">
+        <img
+        src="/img/uploads/<%= filme.poster_image_name%>"
+        class="d-block w-100 poster-image"
+        alt="Poster do Filme"
+      />
+      </div>
+      <div class="col-9 d-flex flex-column justify-content-end">
+        <div class="d-flex flex-row align-items-center justify-content-start" style="gap: 5px; color: #fff; font-weight: 600; border-width: .5px; border-color: #7a7a7a; border-style: solid; width: fit-content; padding: 5px; border-radius: 10px; ">
+          <div style="background-color: #BE0D0D; border-radius: 5px; padding-inline: 5px; ">16</div>
+        </div>
+          <p style="margin: 0px;">Ação</p>
+        <p class="filme-descricao"><%= filme.descricao %></p>
+        <p class="filme-descricao" style="margin: 0px;">Classificação indicativa 16 Anos. Contém drogas, linguagem imprópria, violência extrema.</p>
+      </div>
+    </div>
+    <div>     
+      <hr>
+      <div class="filme-descricao-item">
+        <p class="filme-descricao-item-title">Distribuído por</p>
+        <p class="filme-descricao-item-data"><%= filme.distribuidora %></p>
+      </div>
+      <hr>
+      <div class="filme-descricao-item">
+        <p class="filme-descricao-item-title">Diretor</p>
+        <p class="filme-descricao-item-data"><%= filme.diretor %></p>
+      </div>
+      <hr>
+      <div class="filme-descricao-item">
+        <p class="filme-descricao-item-title">Ano</p>
+        <p class="filme-descricao-item-data"><%= filme.ano %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer.ejs') %>

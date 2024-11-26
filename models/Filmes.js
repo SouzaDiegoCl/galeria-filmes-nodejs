@@ -6,7 +6,15 @@ const Filme = connection.define("filmes", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  poster_image_extension: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   wallpaper_image_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  wallpaper_image_extension: {
     type: Sequelize.STRING,
     allowNull: false,
   },
@@ -32,5 +40,5 @@ const Filme = connection.define("filmes", {
   },
 });
 
-Filme.sync({ force: true });
+Filme.sync({ force: false });
 export default Filme;
